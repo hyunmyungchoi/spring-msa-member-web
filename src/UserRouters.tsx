@@ -1,13 +1,13 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import UserAuthLayout from "../layouts/UserAuthLayout";
-import UserLayout from "../layouts/UserLayout";
-import CommunityEntryPage from "../community/pages/CommunityEntryPage";
-import ServiceSelectPage from "../pages/ServiceSelectPage";
-import StockEntryPage from "../stock/pages/StockEntryPage";
-import UserAuthPage from "../pages/UserAuthPage";
+import CommunityEntryPage from "./community/pages/CommunityEntryPage";
+import UserAuthLayout from "./common/layouts/UserAuthLayout";
+import UserLayout from "./common/layouts/UserLayout";
+import ServiceSelectPage from "./common/pages/ServiceSelectPage";
+import UserAuthPage from "./common/pages/UserAuthPage";
+import StockEntryPage from "./stock/pages/StockEntryPage";
 
-// Defines the user web page routes.
-function UserRoutes() {
+// Defines the user web page routers.
+function UserRouters() {
     return (
         <Routes>
             <Route element={<UserAuthLayout />}>
@@ -25,4 +25,4 @@ function UserRoutes() {
     );
 }
 
-export default UserRoutes;
+export default UserRouters;

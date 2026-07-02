@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { FormEvent } from "react";
 import { useUserLogin } from "../../hooks/useUserLogin";
 import { USER_ERROR_MESSAGES } from "../../messages/userErrorMessages";
@@ -15,10 +15,6 @@ function UserLoginForm({ defaultLoginId, pending, onPendingChange, onMessageChan
     const { loginWithPassword } = useUserLogin();
     const [loginId, setLoginId] = useState(defaultLoginId);
     const [password, setPassword] = useState("password");
-
-    useEffect(() => {
-        setLoginId(defaultLoginId);
-    }, [defaultLoginId]);
 
     const handlePasswordLogin = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();

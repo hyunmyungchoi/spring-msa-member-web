@@ -1,7 +1,7 @@
 import type { PasswordLoginResponse } from "../types/login";
 import type { SignupRequest, SignupResponse } from "../types/signup";
 import type { UserAuthMeResponse } from "../types/userSession";
-import type { UserLogoutResponse } from "../types/userAuth";
+import type { UserHeartbeatResponse, UserLogoutResponse } from "../types/userAuth";
 import { memberRequest } from "./memberApiClient";
 
 const MEMBER_OAUTH2_LOGIN_PATH = "/bff/oauth2/authorization/member-bff";
@@ -18,6 +18,14 @@ export function fetchUserAuthMe(signal?: AbortSignal): Promise<UserAuthMeRespons
 export function requestUserLogout(): Promise<UserLogoutResponse> {
     return memberRequest<UserLogoutResponse>({
         url: "/bff/auth/logout",
+        method: "POST",
+    });
+}
+
+// Refreshes the member online heartbeat TTL key.
+export function sendUserHeartbeat(): Promise<UserHeartbeatResponse> {
+    return memberRequest<UserHeartbeatResponse>({
+        url: "/bff/auth/heartbeat",
         method: "POST",
     });
 }
