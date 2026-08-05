@@ -1,4 +1,4 @@
-﻿import { memberRequest } from "@springmsa/member-common/api/memberApiClient";
+import { memberRequest } from "@hyunmyungchoi/member-common/api/memberApiClient";
 import type { ChatMessage } from "../types/chatMessage";
 
 export function fetchChatMessages(roomId: string, signal?: AbortSignal): Promise<ChatMessage[]> {

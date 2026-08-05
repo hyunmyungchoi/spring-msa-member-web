@@ -1,8 +1,8 @@
-﻿import { StrictMode } from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-import { userStore } from "@springmsa/member-common/store/userStore";
-import "@springmsa/member-common/index.css";
+import { userStore } from "@hyunmyungchoi/member-common/store/userStore";
+import "@hyunmyungchoi/member-common/index.css";
 import App from "./App";
 
 createRoot(document.getElementById("root")!).render(

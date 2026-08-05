@@ -1,5 +1,5 @@
-﻿import { BrowserRouter } from "react-router-dom";
-import "@springmsa/member-common/App.css";
+import { BrowserRouter } from "react-router-dom";
+import "@hyunmyungchoi/member-common/App.css";
 import UserRouters from "./UserRouters";
 
 // Mounts the user web router.

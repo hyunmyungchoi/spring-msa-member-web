@@ -1,9 +1,9 @@
-﻿import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import ChatEntryPage from "./chat/pages/ChatEntryPage";
-import UserAuthLayout from "@springmsa/member-common/layouts/UserAuthLayout";
-import UserLayout from "@springmsa/member-common/layouts/UserLayout";
-import ServiceSelectPage from "@springmsa/member-common/pages/ServiceSelectPage";
-import UserAuthPage from "@springmsa/member-common/pages/UserAuthPage";
+import UserAuthLayout from "@hyunmyungchoi/member-common/layouts/UserAuthLayout";
+import UserLayout from "@hyunmyungchoi/member-common/layouts/UserLayout";
+import ServiceSelectPage from "@hyunmyungchoi/member-common/pages/ServiceSelectPage";
+import UserAuthPage from "@hyunmyungchoi/member-common/pages/UserAuthPage";
 
 function UserRouters() {
     return (
